@@ -1,23 +1,40 @@
 # Infrastructure as code with AWS CDK
 
-## CDK Installation 
+## Requirements
+- AWS CLI
+- node.js
+- npm
+
+## Install the CDK
 ```
-# Configure credentials with access key (created on AWS Console)
+# Configure credentials with your access key (created on AWS Console)
 aws configure
 
 # Install AWS CDK
 npm install aws-cdk -g
 ```
 
-## CDK Sample App
+## Launch a CDK Sample App
 ```
-mkdir SampleCDKApp
-cd SampleCDKApp
+# Create sample project folder 
+mkdir sample_app
+cd sample_app
+
+# Create project
 cdk init sample-app --language python
+
+# Create needed AWS resources for CDK environment
 cdk bootstrap
+
+# Generate CloudFormation templates from code
 cdk synth
+
+# Launch templates with CloudFormation
 cdk deploy
 ```
+
+## Python CDK Samples
+[aws-samples / aws-cdk-examples](https://github.com/aws-samples/aws-cdk-examples/tree/master/python)
 
 ## Common CDK Commands
 ```
